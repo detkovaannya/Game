@@ -1,4 +1,0 @@
-/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/anna/CLionProjects/game
--- Configuring done
--- Generating done
--- Build files have been written to: /home/anna/CLionProjects/game/cmake-build-debug
