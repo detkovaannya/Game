@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/game.dir/main.cpp.o CMakeFiles/game.dir/cell.cpp.o CMakeFiles/game.dir/field.cpp.o CMakeFiles/game.dir/iterator.cpp.o CMakeFiles/game.dir/builder.cpp.o CMakeFiles/game.dir/basefield_builder.cpp.o -o game 
