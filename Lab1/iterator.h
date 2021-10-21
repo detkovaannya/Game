@@ -5,20 +5,23 @@
 
 class IteratorOfField{
 public:
-    explicit IteratorOfField(Field* iter);
+    explicit IteratorOfField(Field& iter);
     void First();
     void Next();
+    IteratorOfField& operator ++();
+    IteratorOfField operator ++(int);
     bool IsDone();
     Cell* Current();
-    bool Is_Board();
-    bool Is_St();
-    bool Is_Fn();
-    bool Is_Even();
+    Cell* operator *();
+    bool IsBoard();
+    bool IsAbleSt();
+    bool IsAbleFn();
+    bool IsEven();
     int ret_y();
     int ret_x();
 private:
     int ind1, ind2;
-    Field* iter_field;
+    Field& iter_field;
     Cell* iter_cell;
 };
 

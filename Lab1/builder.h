@@ -7,7 +7,9 @@
 class Builder{
 public:
     //virtual ~Builder() = 0;
-    virtual void Build_Base_Field(Field& f) = 0;
+    virtual void Build_Floor(Field& f) = 0;
+    virtual void Build_Block_Cells(Field& f) = 0;
+    virtual void Build_Exit_Entire(Field& f) = 0;
 };
 
 

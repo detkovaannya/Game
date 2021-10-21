@@ -1,51 +1,68 @@
+#include <iostream>
 #include "cell.h"
-#include "states_of_cell.h"
 
-Cell::Cell(char data): content(data){
-    if (content == ' ')
-        state = empty;
-    else if (content == '#')
-        state = impassable;
-    else if (content == '1' || content == '2' || content =='3')
-        state = monster;
-    else if (content == '*')
-        state = player;
-    else if (content == '>')
-        state = start;
-    else if (content == '<')
-        state = finish;
-    else if (content == '&')
-        state = key;
-    else if (content == '+' || content == '@' || content == '/')
-        state =  object;
-    else if (content == '\n')
-        state = unique;
+Cell::Cell(const std::string& filename, sf::Vector2f vec, STATES st, Interface_Object_Cell* ob):
+state(st), obj(ob), position(vec){
+    texture.loadFromFile(filename);
+    sprite = sf::Sprite(texture);
+    sprite.setPosition(position.x * SIZE_OF_SPRITE, position.y * SIZE_OF_SPRITE);
 }
-char Cell::get_content(){
-    return content;
+Cell::Cell(const Cell& other){
+    state = other.state;
+    texture = other.texture;
+    sprite = other.sprite;
+    obj = nullptr;
 }
-void Cell::change_content(char c){
-    content = c;
-    if (content == ' ')
-        state = empty;
-    else if (content == '#')
-        state = impassable;
-    else if (content == '1' || content == '2' || content =='3')
-        state = monster;
-    else if (content == '*')
-        state = player;
-    else if (content == '>')
-        state = start;
-    else if (content == '<')
-        state = finish;
-    else if (content == '&')
-        state = key;
-    else if (content == '+' || content == '@' || content == '/')
-        state =  object;
-    else if (content == '\n')
-        state = unique;
+Cell& Cell::operator=(const Cell& other){
+    if(this != &other){
+        state = other.state;
+        texture = other.texture;
+        sprite = other.sprite;
+        obj = nullptr;
+    }
+    return *this;
 }
+Cell::Cell(Cell&& other){
+    std::swap(state, other.state);
+    std::swap(texture, other.texture);
+    std::swap(sprite, other.sprite);
+    std::swap(obj, other.obj);
+}
+Cell& Cell::operator=(Cell&& other){
+    if(this != &other){
+        std::swap(state, other.state);
+        std::swap(texture, other.texture);
+        std::swap(sprite, other.sprite);
+        std::swap(obj, other.obj);
+    }
+    return *this;
+}
+void Cell::SetState(STATES st, const std::string& filename) {
+    texture.loadFromFile(filename);
+    sprite = sf::Sprite(texture);
+    sprite.setPosition(position.x * SIZE_OF_SPRITE, position.y * SIZE_OF_SPRITE);
+    state = st;
+}
+int Cell::GetState() {
+    return state;
+}
+bool Cell::IsEmpty() const{
+    return (state == 1);
+}
+bool Cell::IsImpassable() const{
+    return (state == 0 || state == 2);
+}
+sf::Sprite Cell::GetIMG(){
+    return sprite;
+}
+sf::Vector2f Cell::GetPos(){
+    return position;
+}
+/*void Cell::ChangeContent(Interface_Object_Cell* data){
+    delete obj;
+    obj = data;
+}
+Interface_Object_Cell* Cell::get_object() {
+    return obj;
+}*/
 
-bool Cell::IsEmpty() {
-    return (state == empty);
-}

@@ -1,10 +1,8 @@
-#include "field.h"
-#include "basefield_builder.h"
+#include "game.h"
 
 int main() {
-    Field f;
-    BaseFieldBuilder b;
-    b.Build_Base_Field(f);
-    f.print_field();
+    Game game;
+    game.GameStart();
+
     return 0;
 }

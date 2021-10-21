@@ -7,7 +7,9 @@
 
 class BaseFieldBuilder: public Builder{
 public:
-    void Build_Base_Field(Field& field) final;
+    void Build_Floor(Field& f) final;
+    void Build_Block_Cells(Field& f) final;
+    void Build_Exit_Entire(Field& f) final;
 };
 
 
