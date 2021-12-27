@@ -1,0 +1,84 @@
+Player took weapon.
+Player
+Health: 430; attack: 70; armor: 0; keys: 0; quantity of killed enemies: 0.
+Ghost got hit.
+Ghost
+Health: 50.
+Player got hit.
+Player
+Health: 420; attack: 70; armor: 0; keys: 0; quantity of killed enemies: 0.
+Ghost got hit and died.
+Ghost
+Health: 0.
+Player took heal.
+Player
+Health: 470; attack: 70; armor: 0; keys: 0; quantity of killed enemies: 1.
+Ghost got hit.
+Ghost
+Health: 50.
+Player got hit.
+Player
+Health: 460; attack: 70; armor: 0; keys: 0; quantity of killed enemies: 1.
+Player got hit.
+Player
+Health: 450; attack: 70; armor: 0; keys: 0; quantity of killed enemies: 1.
+Ghost got hit and died.
+Ghost
+Health: 0.
+Player got hit.
+Player
+Health: 440; attack: 70; armor: 0; keys: 0; quantity of killed enemies: 2.
+Ghost got hit.
+Ghost
+Health: 50.
+Player got hit.
+Player
+Health: 430; attack: 70; armor: 0; keys: 0; quantity of killed enemies: 2.
+Ghost got hit and died.
+Ghost
+Health: 0.
+Player took key.
+Player
+Health: 430; attack: 70; armor: 0; keys: 1; quantity of killed enemies: 3.
+Player took key.
+Player
+Health: 430; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Player got hit.
+Player
+Health: 380; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Player got hit.
+Player
+Health: 400; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Player got hit.
+Player
+Health: 350; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Enemy3 got hit.
+Enemy2
+Health: 270.
+Player got hit.
+Player
+Health: 300; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Enemy3 got hit.
+Enemy2
+Health: 200.
+Player got hit.
+Player
+Health: 250; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Enemy3 got hit.
+Enemy2
+Health: 130.
+Player got hit.
+Player
+Health: 200; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Enemy3 got hit.
+Enemy2
+Health: 60.
+Player got hit.
+Player
+Health: 150; attack: 70; armor: 0; keys: 2; quantity of killed enemies: 3.
+Enemy3 got hit and died.
+Enemy2
+Health: 0.
+Player took key.
+Player
+Health: 150; attack: 70; armor: 0; keys: 3; quantity of killed enemies: 4.
